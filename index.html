@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+   <script src="https://kit.fontawesome.com/1b6e5a178e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"href="index-1.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoCo JuNcTiOn</title>
+    <link rel="icon"href="logo.ico"type="image/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  
+
+    <header>
+        <div id="main">
+            <div id="logo">L<span id="o">o</span>C<span id="o2">o</span>.in</div><div>
+                <form id="form">
+                <input type="text"id="find"name="serchbox"placeholder="Search products"onkeypress="search()">
+                <button type="button"id="serch-El">🔍</button>
+
+               </form></div>
+                <!--N   e   w              c    o    n   t     e    n   t-->
+
+
+
+
+                <div id="digital-clock">
+                <div id="hr"onclick="music()">00</div>
+                <span id="colo"onclick="music()">:</span>
+                <div id="min"onclick="music()">00</div>
+                <span id="colo"onclick="music()">:</span>
+                <div id="sec"onclick="music()">00</div>
+                </div>
+                <script>
+                    function music(){
+                        let sound = new Audio('clock.wav')
+    sound.play()
+                    }
+               let hours = document.getElementById("hr");
+               let sec = document.getElementById("sec");
+               let min = document.getElementById("min");
+            let clock=setInterval(function clock(){
+        let date=new Date();
+        let hrs=date.getHours();
+        let minutes=date.getMinutes();
+        let seconds=date.getSeconds();
+       hrs = hrs>12?hrs%12:hrs;
+         hours.textContent=hrs;
+         min.textContent=minutes;
+         sec.textContent=seconds;
+         
+            },3)
+                </script>
+            <div class="addtocart">
+             <button id="addbutton"><i class="fa-solid fa-cart-shopping"style="font-size:50px;"></i></button>
+             <div class="cartamount"id="cartamount">0</div>
+            </div>      
+        </div>
+        <script>
+         let addtoCart=document.querySelector("#addbutton")
+
+addtoCart.addEventListener('click',function(){
+
+  window.location.href = "add.html"
+})
+
+        </script>
+            </header>
+            
+
+
+            <!--n  e  w       c  o  n  t  e  n  t-->
+        <section>
+            <div id="no1">
+            <h1 id="a">Under 20,000</h1>
+            <h2 id="b">Top rated Electronic & accessories</h2>
+            <h3 id="c">Free delivery 🚚 | Free returns 🔙</h2>
+                <div class="img">
+             <a href="watch.png"><img src="watch.png"id="watch"></a>
+             <a href="iphone.png">  <img src="iphone.png"id="iphone"></a>
+                <a href="earpod.png">  <img src="earpod.png"id="earpod"></a>
+                    <a href="apple.png">   <img src="apple.png"id="apple"></a>
+                        <a href="headphone.png"> <img src="headphone.png"id="headPhone"></a>
+                </div>
+            </div>
+        </section>
+          <!--n  e  w            s  e  c  t  i  o  n-->
+
+        <div id="no2">
+            </div>
+
+            
+  
+
+
+    <!--F    o    o    t    e    r-->
+        <footer>
+        <div class="foot1">
+      <footer id="top"> <a href="#"><h1 style="color:aliceblue">Back to top</h1></a></footer>
+        <footer id="bottom">&COPY;L<span id="o">o</span>C<span id="o2">o</span>.in </footer>
+         <footer id="bottom2">
+  Pay on cash      |    this app does'nt have adds |  &COPY;2022-2025,L<span id="o">o</span>C<span id="o2">o</span>.in ,Inc.</footer>
+        </footer>
+      </div>
+      <script src="Data.js"></script>
+        <script src="index-3.js"></script>
+</body> 
+
+</html>
